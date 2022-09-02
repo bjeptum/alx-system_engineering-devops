@@ -7,3 +7,13 @@
  - 5-execute_script: Adds execute permission to the owner of file hello
  - 6-multiple_permissions_script: Adds execute permission to the owner and the group owner, and read permission to other users
  - 7-everybody_script: Adds execution permission to the owner, the group owner and the other users
+ - 8-James_Bond_script: Sets the other users permission to the file hello
+ - 9-John_Doe_script: Sets the mode of the file hello to -rwxr-x-wx
+ - 10-mirror_permissions_script: Sets the mode of the file hello the same as olleh’s mode
+ - 11-directories_permissions_script: Adds execute permission to all subdirectories without change on regular files
+ - 12-directory_permissions_script: Creates a directory called my_dir with permissions 751
+ - 13-change_group_script: Changes the group owner to school
+ - 100-change_owner_and_group_script: Changes the owner to vincent and the group owner to staff for all the files and directories
+ - 101-symbolic_link_permissions_script: Changes the owner and the group owner of a symbolic link to vincent and staff
+ - 102-if_only_script: Changes the owner of the file hello to betty only if it is owned by the user guillaume
+ - 103-Star_Wars_script: Play the StarWars IV episode in the terminal
