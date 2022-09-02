@@ -1,10 +1,10 @@
 ### Scripts description 
- - 0-current_working_directory_script: prints the absolute path name of the current working directory
- - 1-listit-script: display the contents list of your current directory
- - 2-bring_me_home_script: changes the working directory to the user’s home directory
- - 3-listfiles_script: displays current directory contents in a long format
- - 4-listmorefiles_script: displays current directory contents including hidden files
- - 5-listfilesdigitonly_script: display current directory contents in long format with user and group ids
+ - 0-current_working_directory: prints the absolute path name of the current working directory
+- 1-listit: display the contents list of your current directory
+ - 2-bring_me_home: changes the working directory to the user’s home directory
+ - 3-listfiles: displays current directory contents in a long format
+ - 4-listmorefiles: displays current directory contents including hidden files
+ - 5-listfilesdigitonly: displays current directory contents in long format with user and group ids
  - 6-firstdirectory: reates a directory in the /tmp/ directory
  - 7-movethatfile: move file /tmp/ to /tmp/my_first_directory
  - 8-firstdelete: deletes the file betty
