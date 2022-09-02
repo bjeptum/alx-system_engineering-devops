@@ -6,3 +6,4 @@
  - 4-empty_script: Creates an empty file called hello
  - 5-execute_script: Adds execute permission to the owner of file hello
  - 6-multiple_permissions_script: Adds execute permission to the owner and the group owner, and read permission to other users
+ - 7-everybody_script: Adds execution permission to the owner, the group owner and the other users
