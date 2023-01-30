@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # Displays the details of processes whose name contain the word bash
-pgrep "bash"
+pgrep -l bash
