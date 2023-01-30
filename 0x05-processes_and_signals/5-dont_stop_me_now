@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Displays To infinity and beyond but stops process using kill
+pid=$(pgrep "4-to_infinity_and_beyond")
+if [ -n "$pid" ]; then
+    kill "$pid"
+    echo "Terminated"
+else
+    echo "4-to_infinity_and_beyond process not found"
+fi
