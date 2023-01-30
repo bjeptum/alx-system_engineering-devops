@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This displays a list of the icurrently running processes
 # Display in a user-oriented format and Show process hierarchy
-ps -u --forest
+ps -u -a -x -f
