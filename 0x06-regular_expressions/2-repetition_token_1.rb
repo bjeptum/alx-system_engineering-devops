@@ -1,3 +1,3 @@
 #!/usr/bin/env ruby
-#Displays a repeat of character b in string
-puts ARGV[0].scan(/h(b)?tn/).join
+#Displays string with or without character b in string
+puts ARGV[0].scan(/hb?tn/).join
