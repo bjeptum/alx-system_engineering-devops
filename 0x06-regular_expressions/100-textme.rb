@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 #Matches sender and receiver details(phone number or name) and flags used
-match = Oniguruma::ORegexp.new(/\[from:(.*?)\] \[to:(.*?)\] \[flags:(.*?)\]/).match(ARGV[0])
+text = ARGV[0]
+match = Oniguruma::ORegexp.new(/\[from:(.*?)\] \[to:(.*?)\] \[flags:(.*?)\]/).match(text)
 if match
   sender = match[1]
   receiver = match[2]
