@@ -13,7 +13,3 @@ The addition of a firewall between each server protects each server from unwante
 1) This infrastructure has high maintenance costs
 
 Some funds would be used in ensuring that each of the major components had its own server. The addition of more servers will also result in high electricity consumption.
-
-
-
-
