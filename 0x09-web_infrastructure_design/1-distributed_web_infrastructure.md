@@ -42,4 +42,5 @@ The Primary node is responsible for all the write operations while the Replica n
 There are no tools or processes to track and identify potential performance or availability issues, which could lead to downtime or other problems for users.
 
 3) Security issues (no firewall, no HTTPS)
+
 There is no firewall or HTTPS encryption, this leaves the web infrastructure vulnerable to unauthorized access. This can result in serious consequences for the user.
