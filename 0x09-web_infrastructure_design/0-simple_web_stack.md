@@ -1,4 +1,4 @@
-#Description
+**Description**
 
 This is a simple web infrastructure. It is composed of : client/user, DNS Configuration, Web-Server(Nginx), Database Server(MySQL), Application files and Application Server.
 There are no SSL/TLS Certificates or firewalls that provides security for the network traffic.
@@ -17,10 +17,11 @@ Example it's easier to remember www.foobar.com than its IP address 8.8.8.8.
 www.foobar.com is of type A recor. You can check this by running dig.
 Use the link below to check:
 https://toolbox.googleapps.com/apps/dig
- A Record is for IP address lookup. A web browser is able to load a website using the domain name.
+_**A Record**is for IP address lookup. A web browser is able to load a website using the domain name._
 
  - Role of the web server
-It is a software/hardware that store, process, and deliver requested information or webpages to end users.It accepts requests via HTTP or secure HTTP(HTTPS) and responsds with the content of the requested resource or an error message.
+It is a software/hardware that store, process, and deliver requested information or webpages to end users.
+It accepts requests via HTTP or secure HTTP(HTTPS) and responsds with the content of the requested resource or an error message.
 
 - Role of the application server
 To install. operate and host applications and associated services for end-users, IT services and organizationsn nad facilitates the hosting and delivery of high-end consumer or business applications.
