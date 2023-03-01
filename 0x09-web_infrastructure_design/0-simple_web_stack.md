@@ -1,3 +1,7 @@
+#0-simple_web_stack Infrastructure
+
+[Details](https://github.com/bjeptum/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/0-simple_web_stack_screenshot.png)
+
 **Description**
 
 This is a simple web infrastructure. It is composed of : client/user, DNS Configuration, Web-Server(Nginx), Database Server(MySQL), Application files and Application Server.
