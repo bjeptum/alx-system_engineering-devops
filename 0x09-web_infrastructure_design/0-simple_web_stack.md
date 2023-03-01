@@ -1,6 +1,6 @@
 #0-simple_web_stack Infrastructure
 
-[Details](https://github.com/bjeptum/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/0-simple_web_stack_screenshot.png)
+[Diagram](https://github.com/bjeptum/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/0-simple_web_stack_screenshot.png)
 
 **Description**
 
@@ -10,9 +10,11 @@ There are no SSL/TLS Certificates or firewalls that provides security for the ne
 **Specifications of the Infrastructure**
 
 - What is a server
+
 A server is a computer (hardware or software) that provides data or services to other computers(commonly referred to as clients) via network.
 
 - The role of the domain name
+
 The domain name is a human-readable identifier that represents an IP address. 
 The role of a domain name is to provide a memorable and easy-to-remember way for people to access resources on the internet, such as websites, email servers, and other online services.
 Example it's easier to remember www.foobar.com than its IP address 8.8.8.8.
@@ -20,22 +22,26 @@ Example it's easier to remember www.foobar.com than its IP address 8.8.8.8.
 - Type of DNS record www is in www.foobar.com
 
 www.foobar.com is of type A record. You can check this by running dig.
-Use the link below to check:
-https://toolbox.googleapps.com/apps/dig
+
+
 _**A Record** is for IP address lookup. A web browser is able to load a website using the domain name._
 
  - Role of the web server
+ 
 It is a software/hardware that store, process, and deliver requested information or webpages to end users.
 It accepts requests via HTTP or secure HTTP(HTTPS) and responsds with the content of the requested resource or an error message.
 
 - Role of the application server
+
 To install. operate and host applications and associated services for end-users, IT services and organizationsn nad facilitates the hosting and delivery of high-end consumer or business applications.
 An application server provides a runtime environment for web applications, manages their components and resources, and handles client requests.
 
 - The role of the database
+
  This is the software that stores and manages data for the website.
 
 - What is the server using to communicate with the computer of the user requesting the website
+
 Communication between the user/client and the server occurs over the internet network through the TCP?IP protocol suite.
 
 
