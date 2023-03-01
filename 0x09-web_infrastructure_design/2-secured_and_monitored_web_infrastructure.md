@@ -1,8 +1,8 @@
 **Secured and monitored web infrastructure**
 
-[Diagram](https://github.com/bjeptum/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/2-secured_and_monitored_web_infrastructure_screenshot.png)
+[Diagram Details](https://github.com/bjeptum/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/2-secured_and_monitored_web_infrastructure_screenshot.png)
 
-*Description*
+**Description**
 
 This infrastructure involves a web infrastructure that has adequate security measures in place to protect against attacks and unauthorized access bu the use of firewalls nad HTTPS encryption.
 In addition, it has 3 monitoring tools, which collect and analyze various metrics to identify potential issues or areas of improvement, and proactive management of the infrastructure.
