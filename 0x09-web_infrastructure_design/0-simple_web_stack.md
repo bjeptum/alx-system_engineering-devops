@@ -16,7 +16,7 @@ Example it's easier to remember www.foobar.com than its IP address 8.8.8.8.
 - Type of DNS record www is in www.foobar.com
 www.foobar.com is of type A recor. You can check this by running dig.
 Use the link below to check:
-https://toolbox.googleapps.com/apps/dig/#A/
+https://toolbox.googleapps.com/apps/dig
  A Record is for IP address lookup. A web browser is able to load a website using the domain name.
 
  - Role of the web server
