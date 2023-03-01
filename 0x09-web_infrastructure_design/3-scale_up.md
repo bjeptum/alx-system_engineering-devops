@@ -2,7 +2,7 @@
 
 [Diagram]()
 
-This is a scaled up web infrastructure. There are no Single Point of Failures(SPOFs) and each of the major components have been moved to separate GNU?Linux Servers. SSl protection would not be terminated at teh load-balancer and each server's network is protected with a firewall and they are also monitored.
+This is a scaled up web infrastructure. There are no Single Point of Failures(SPOFs) and each of the major components have been moved to separate GNU?Linux Servers. SSL protection would not be terminated at the load-balancer and each server's network is protected with a firewall and they are also monitored.
 
 **Specifications**
 
