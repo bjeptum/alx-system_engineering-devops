@@ -5,8 +5,7 @@
 
 **Description (inclusive of the additional elements)**
 
-This is a web infrastructure with multiple servers(two) that tries to reduce traffic to the primary server by distributing some of the load to the replica server with the aid of a server responsible for balancing the load between the two servers. The two servers function as a single unit to serve web content and applications. 
-It is designed to improve scalability, availability, and performance by distributing the workload across multiple servers, while still providing a unified and seamless user experience.
+This is a web infrastructure with multiple servers(two) that tries to reduce traffic to the primary server by distributing some of the load to the replica server with the aid of a load balancer server responsible for balancing the load between the two servers. The two servers function as a single unit to serve web content and applications. 
 
 **Specifics about this Infrastructure**
 
