@@ -1,14 +1,7 @@
-1 FROM httpd:latest
- 2
- 3 RUN apt-get update && apt-get install -y apache2
- 4 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
- 5
- 6 RUN echo "Hello World" > /usr/local/apache2/htdocs/index.html
- 7 EXPOSE 80
+FROM httpd:latest
 
+RUN apt-get update && apt-get install -y apache2
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 
-
-
-
-
-
+RUN echo "Hello World" > /usr/local/apache2/htdocs/index.html
+EXPOSE 80
