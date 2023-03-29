@@ -1,8 +1,3 @@
 #!/usr/bin/env bash
-FROM httpd:latest
-
-RUN apt-get update && apt-get install -y apache2
-CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
-
-RUN echo "Hello Holberton" /usr/local/apache2/htdocs/index.html
-EXPOSE 80
+# start apache2
+service apache2 start
