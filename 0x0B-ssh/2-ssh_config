@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Client configuration file
+Host root@cb05d3694d1e
+IdentityFile ~/.ssh/school
+PasswordAuthentication no
+RSAAuthentication yes
+PubkeyAuthentication yes
