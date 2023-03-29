@@ -1,14 +1,12 @@
-# Client configuration file with puppet
-file { '~/.ssh/school':
+# Client SSH configuration file with puppet  set up to connect to a server without typing a password
+file { '/home/root/.ssh/config':
   ensure  => file,
-  owner   => 'user',
-  group   => 'user',
   mode    => '0600',
-  content => '
-  Host root@cb05d3694d1e
-  IdentityFile ~/.ssh/school
-  PasswordAuthentication no
-  RSAAuthentication yes
-  PubkeyAuthentication yes
-  ',
+  content => "
+    Host cb05d3694d1e
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
+    RSAAuthentication yes
+    PubkeyAuthentication yes
+  ",
 }
