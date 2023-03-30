@@ -11,5 +11,8 @@ sudo sed -i 's/listen 80 default_server;/listen 80;/' /etc/nginx/sites-available
 #Configure Nginx to return "Hello World!" at the root path
 echo "Hello World!" > /var/www/html/index.html
 
+# Enable the new site
+sudo ln -s /etc/nginx/sites-available/hello-world /etc/nginx/sites-enabled/hello-world
+
 # Restart Nginx
 service Nginx restart
