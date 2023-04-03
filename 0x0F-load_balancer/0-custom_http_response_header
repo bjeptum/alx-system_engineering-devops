@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+# Define the domain name
+domain="incredibles.tech"
+
+# Define the IP addresses of the two servers
+web_01="54.237.35.121"
+web_02="100.24.238.34"
+
+# Install Nginx on the first server
+ssh ubuntu@54.237.35.121 "sudo apt-get update &7 sudo apt-get install nginx -y"
+
+# Install Nginx on the second server
+ ssh ubuntu@100.24.238.34 "sudo apt-get update &7 sudo apt-get install nginx -y"
+
+# Configure Nginx to serve the domain on both servers
+echo "upstream $domain {
+  server $web_01;
+  server $web_02;
+}
+
+server {
+  listen 80;
+  server_name $domain;
+  location / {
+    proxy_pass http://$domain;
+  }
+}" | ssh ubuntu@54.237.35.121 "sudo tee /etc/nginx/sites-available/$domain.conf > /dev/null"
+ssh ubuntu@54.237.35.121 "sudo ln -s /etc/nginx/sites-available/$domain.conf /etc/nginx/sites-enabled/$domain.conf"
+ssh ubuntu@54.237.35.121 "sudo service Nginx reload"
+ssh ubuntu@100.24.238.34 "sudo ln -s /etc/nginx/sites-available/$domain.conf /etc/nginx/sites-enabled/$domain.conf"
+ssh ubuntu@100.24.238.34 "sudo service Nginx reload"
