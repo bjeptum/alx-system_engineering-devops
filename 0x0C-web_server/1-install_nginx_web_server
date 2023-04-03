@@ -12,7 +12,7 @@ sudo sed -i 's/listen 80 default_server;/listen 80;/' /etc/nginx/sites-available
 echo "Hello World!" > /var/www/html/index.html
 
 # Enable the new site
-sudo ln -s /etc/nginx/sites-available/hello-world /etc/nginx/sites-enabled/hello-worldi
+sudo ln -s /etc/nginx/sites-available/hello-world /etc/nginx/sites-enabled/hello-world
 
 # Ensure all files end with a newline character
 find . -type f -exec sed -i -e '$a\' {} \;
