@@ -15,4 +15,4 @@ echo "Hello World!" > /var/www/html/index.html
 sudo ln -s /etc/nginx/sites-available/hello-world /etc/nginx/sites-enabled/hello-world
 
 # Restart Nginx
-service Nginx restart
+sudo service Nginx restart
