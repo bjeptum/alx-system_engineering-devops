@@ -21,4 +21,4 @@ A clear understanding of:
 | [2-setup_a_domain_name](https://github.com/bjeptum/alx-system_engineering-devops/blob/master/0x0C-web_server/2-setup_a_domain_name)| Setup a domain name |
 | [3-redirection](https://github.com/bjeptum/alx-system_engineering-devops/blob/master/0x0C-web_server/3-redirection) | Configure the Nginx server so that /redirect_me is redirecting to another page  |
 | [4-not_found_page_404]()  | Configure the Nginx server to have a custom 404 page that contains the string "Ceci n'est pas une page" |
-| [7-puppet_install_nginx_web_server.pp]()  | Install and configure an Nginx server using Puppet instead of Bash |
+| [7-puppet_install_nginx_web_server.pp]()| Install and configure an Nginx server using Puppet instead of Bash |
