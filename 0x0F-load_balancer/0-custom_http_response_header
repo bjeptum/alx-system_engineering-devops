@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# Track which web server is answering HTTP requests
 # Define the domain name
 domain="incredibles.tech"
 
@@ -8,10 +8,10 @@ web_01="54.237.35.121"
 web_02="100.24.238.34"
 
 # Install Nginx on the first server
-ssh ubuntu@54.237.35.121 "sudo apt-get update &7 sudo apt-get install nginx -y"
+ssh ubuntu@54.237.35.121 "sudo apt-get update && sudo apt-get install nginx -y"
 
 # Install Nginx on the second server
- ssh ubuntu@100.24.238.34 "sudo apt-get update &7 sudo apt-get install nginx -y"
+ ssh ubuntu@100.24.238.34 "sudo apt-get update && sudo apt-get install nginx -y"
 
 # Configure Nginx to serve the domain on both servers
 echo "upstream $domain {
