@@ -1,7 +1,24 @@
 #!/usr/bin/env bash
+# Configure Ubuntu machine
+sudo apt-get install -y build-essential
+sudo apt-get install -y software-properties-common
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt-get install -y php7.4
+sudo apt-get install -y php7.4-cli
+sudo apt-get install -y php7.4-fpm
+sudo apt-get install -y php7.4-common
+sudo apt-get install -y php7.4-curl
+sudo apt-get install -y php7.4-gd
+sudo apt-get install -y php7.4-mbstring
+sudo apt-get install -y php7.4-mysql
+sudo apt-get install -y php7.4-xml
+sudo apt-get install -y php7.4-zip
+sudo service restart php7.4-fpm
+
 # Install Nginx
 sudo apt-get update
-sudo apt-get install nginx -y
+sudo apt-get install -y nginx
 
 #Adjust the firewall
 sudo ufw allow 'Nginx HTTP'
