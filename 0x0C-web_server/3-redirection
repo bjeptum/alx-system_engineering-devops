@@ -1,32 +1,30 @@
 #!/usr/bin/env bash
 # Install Nginx
+CONFIG_FILE="/etc/nginx/sites-available/default"
 sudo apt-get update
-sudo apt-get install nginx -y
+sudo apt-get install -y nginx
 
 # Adjust the firewall
 sudo ufw allow 'Nginx HTTP'
-
-# Configure Nginx to listen on port 80
-sudo sed -i 's/listen 80 default_server;/listen 80;/' /etc/nginx/sites-available/default
 
 # Configure Nginx to return "Hello World!" at the root path
 echo "Hello World!" > /var/www/html/index.html
 
 # Create a new Nginx configuration file for the redirection
-sudo bash -c 'cat > /etc/nginx/sites-available/redirect-me << EOF
+sudo tee "$CONFIG_FILE" <<EOF
 server {
     listen 80;
-    server_name incredibles.tech;
-
+    server_name http://incredibles.tech;
     location /redirect_me {
         return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
     }
 }
-EOF'
-
-# Create a symbolic link to the new configuration file in the sites-enabled directory
-sudo ln -s /etc/nginx/sites-available/redirect-me /etc/nginx/sites-enabled/
+EOF
 
 # Test the Nginx configuration and restart the server
 sudo nginx -t
-sudo systemctl restart nginx
+sudo service nginx restart
+
+# Test the Nginx configuration and restart the server
+sudo nginx -t
+service restart nginx
