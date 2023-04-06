@@ -14,8 +14,9 @@ echo "Hello World!" > /var/www/html/index.html
 sudo tee "$CONFIG_FILE" <<EOF
 server {
     listen 80;
-    server_name http://incredibles.tech;
-    rewrite ^/$ redirect_me htps://www.youtube.com/watch?v=QH2-TGUlwu4/permanent;
+    server_name incredibles.tech;
+    location /redirect_me {
+    	return 301 https://www.youtube.com;
     }
 }
 EOF
