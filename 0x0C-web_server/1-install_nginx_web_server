@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Install Nginx
-CONFIG_FILE="/etc/nginx/sites-available/default"
+CONFIG_FILE="/etc/nginx/sites-available/incredibles.tech"
 sudo apt-get update
 sudo apt-get install -y nginx
 
@@ -11,12 +11,12 @@ sudo ufw allow 'Nginx HTTP'
 sudo tee "$CONFIG_FILE" <<EOF
 server {
     listen 80;
-    server_name http://incredibles.tech;
+    server_name incredibles.tech;
 }
 EOF
 
 #Configure Nginx to return "Hello World!" at the root path
-echo "Hello World!" > /var/www/html/index.html
+echo "Hello World!" > /var/www/incredibles.tech/html/index.html
 
 # Restart Nginx
 sudo nginx -t
