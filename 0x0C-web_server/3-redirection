@@ -24,7 +24,3 @@ EOF
 # Test the Nginx configuration and restart the server
 sudo nginx -t
 sudo service nginx restart
-
-# Test the Nginx configuration and restart the server
-sudo nginx -t
-service restart nginx
