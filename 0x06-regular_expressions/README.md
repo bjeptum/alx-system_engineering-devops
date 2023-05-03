@@ -21,4 +21,12 @@ puts ARGV[0].scan(/.../).join
 
 |Filenames | Description |
 | ------------- | ------------- |
-|1) [0-simply_match_school.rb]()
+|1) [0-simply_match_school.rb](https://github.com/bjeptum/alx-system_engineering-devops/blob/master/0x06-regular_expressions/0-simply_match_school.rb)|Displays the string School|
+|2) [1-repetition_token_0.rb](https://github.com/bjeptum/alx-system_engineering-devops/blob/master/0x06-regular_expressions/1-repetition_token_0.rb)| Matches repetition of a character between 2 and 5 times |
+|3) [2-repetition_token_1.rb](https://github.com/bjeptum/alx-system_engineering-devops/blob/master/0x06-regular_expressions/2-repetition_token_1.rb)| Displays string with or without character b in string |
+|4) [3-repetition_token_2.rb](https://github.com/bjeptum/alx-system_engineering-devops/blob/master/0x06-regular_expressions/3-repetition_token_2.rb) |Displays repetition of t character between 1 and 4 times |
+|5) [4-repetition_token_3.rb](https://github.com/bjeptum/alx-system_engineering-devops/blob/master/0x06-regular_expressions/4-repetition_token_3.rb) | Matches case of repetition of character t 0 or more times |
+|6) [5-beginning_and_end.rb](https://github.com/bjeptum/alx-system_engineering-devops/blob/master/0x06-regular_expressions/5-beginning_and_end.rb) | Matches 3 character word that starts with h and ends with n |
+|7) [6-phone_number.rb](https://github.com/bjeptum/alx-system_engineering-devops/blob/master/0x06-regular_expressions/6-phone_number.rb) | Matches a 10 digit phone number |
+|8) [7-OMG_WHY_ARE_YOU_SHOUTING.rb](https://github.com/bjeptum/alx-system_engineering-devops/blob/master/0x06-regular_expressions/7-OMG_WHY_ARE_YOU_SHOUTING.rb) | Matches capital letters only |
+|9) [100-textme.rb](https://github.com/bjeptum/alx-system_engineering-devops/blob/master/0x06-regular_expressions/100-textme.rb) | Runs statistics on a log file to output details of [SENDER],[RECEIVER],[FLAGS] |
