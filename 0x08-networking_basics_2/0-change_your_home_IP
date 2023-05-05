@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 #Configure Ubuntu server
-echo "[Resolve]" | sudo tee /etc/systemd/resolved.conf.d/customdns.conf > /dev/null
-echo "8.8.8.8 facebook.com" | sudo tee -a /etc/systemd/resolved.conf.d/customdns.conf
-sudo systemctl reload systemd-resolved.service
+echo "8.8.8.8 facebook.com" | sudo tee -a /etc/hosts >/dev/null
 echo "127.0.0.2 localhost" | sudo tee -a /etc/hosts >/dev/null
