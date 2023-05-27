@@ -1,6 +1,6 @@
 ## 0-simple_web_stack Infrastructure
 
-[Diagram]()
+[Diagram](https://github.com/bjeptum/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/0-simple_web_stack_.png)
 
 ### **Description**
 
@@ -22,10 +22,10 @@ Example it's easier to remember www.foobar.com than its IP address 8.8.8.8.
 
 - Type of DNS record www is in www.foobar.com
 
-www.foobar.com is of type A record. You can check this by running dig.
+www.foobar.com is type A record.
 
 
-_**A Record** is for IP address lookup. A web browser is able to load a website using the domain name._
+_**A Record** is for IP address lookup. A web browser is able to load a website using the domain name.
 
  - Role of the web server
  
@@ -34,7 +34,7 @@ It accepts requests via HTTP or secure HTTP(HTTPS) and responsds with the conten
 
 - Role of the application server
 
-To install. operate and host applications and associated services for end-users, IT services and organizationsn nad facilitates the hosting and delivery of high-end consumer or business applications.
+To install. operate and host applications and associated services for end-users, IT services and organizationsn and facilitates the hosting and delivery of high-end consumer or business applications.
 An application server provides a runtime environment for web applications, manages their components and resources, and handles client requests.
 
 - The role of the database
@@ -57,7 +57,7 @@ There are multiple SPOF in this infrastructure. Example, if the MySQL database s
 
 When one needs to run maintenance checks on any of the components, the server has to be turned off or put down. There is only one server for the website, thus we would experience a downtime.
 
-3) *Lack of scale incase of too much incoming traffic*
+3) *Lack of scale incase of traffic load due to too much incoming traffic*
 
 The infrastructure relies on only one server to handle all the commponents. 
 We would experience lack of scale, meaning that as the number of users and requests to the server increases, the server may become overwhelmed and unable to keep up with demand.
