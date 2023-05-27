@@ -1,6 +1,6 @@
 ## **Distributed Web-Infrastructure**
 
-.[Diagram Details]( )
+[Diagram Details](https://github.com/bjeptum/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/1-distributed_web_infrastructure.png )
 
 
 ###**Description (inclusive of the additional elements)**
