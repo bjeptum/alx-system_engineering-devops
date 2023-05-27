@@ -2,7 +2,7 @@
 
 This project entailed designing different types of server web infrastructure.
 
-With each infrastructure, the issues with each infrastructure were explained touching on:
+With each infrastructure, the issues with each were explained touching on:
 
 - SPOF (Single Point of Failure)
 - Downtime when maintenance needed (like deploying new code web server needs to be restarted)
