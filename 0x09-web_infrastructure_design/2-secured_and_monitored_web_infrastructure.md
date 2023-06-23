@@ -1,13 +1,13 @@
 ## **Secured and monitored web infrastructure**
 
-[Diagram Details]()
+[Diagram Details](https://github.com/bjeptum/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/2-secured_and_monitored_web_infrastructure.png)
 
-###**Description**
+### **Description**
 
 This infrastructure involves a web infrastructure that has adequate security measures in place to protect against attacks and unauthorized access by the use of firewalls and HTTPS encryption.
 In addition, it has 3 monitoring tools, which collect and analyze various metrics to identify potential issues or areas of improvement, and proactive management of the infrastructure.
 
-###**Specifications of this Infrastructure**
+### **Specifications of this Infrastructure**
 
 1) Purpose of the firewalls
  
@@ -27,7 +27,7 @@ They analyse the performance and operations of the servers, measure the overall 
 
 The monitoring tool collects data by using various mechanisms and protocols (example agents[Datadog Agents] or daemons)to access and extract data from the systems and applications monitored. It can include collecting system logs, network traffic, performance metric and much more depending on the specific monitoring tool and configuration. The tool then processes and analyzes the data to provide insights into the performance and status of the systems and applications. 
 
-###**Issues of this infrastructure**
+### **Issues of this infrastructure**
 
 1) Terminating SSL at the load balancer level
 

@@ -1,13 +1,13 @@
 ## **Distributed Web-Infrastructure**
 
-.[Diagram Details]( )
+[Diagram Details](https://github.com/bjeptum/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/1-distributed_web_infrastructure.png )
 
 
-###**Description (inclusive of the additional elements)**
+### **Description (inclusive of the additional elements)**
 
 This is a web infrastructure with multiple servers(two) that tries to reduce traffic to the primary server by distributing some of the load to the replica server with the aid of a load balancer server. The load balancer is responsible for balancing the load between the two servers. The two servers function as a single unit to serve web content and applications. 
 
-###**Specification about this Infrastructure**
+### **Specification about this Infrastructure**
 
 1) The distribution algorithm in which the load balancer is configured and how it works
 
@@ -30,7 +30,7 @@ The primary server is capable of performing read/write requests while the replic
 
 The Primary node is responsible for all the write operations while the Replica node is capableof processing read operations which decreases the read traffic to the Primary node.
 
-**Issues with the Infrasructure**
+### **Issues with the Infrasructure**
 
 1) SPOF (Single Point Of Failure)
 
