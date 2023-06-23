@@ -1,4 +1,4 @@
-# Configuration_management using Puppet.
+## Configuration_management using Puppet.
 
 This project entails introduction to configuration management. I did implement the Puppet tool.
 Puppet is a popular open-source configuration management tool that enables administrators to define and enforce the desired state of their infrastructure.
