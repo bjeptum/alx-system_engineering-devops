@@ -3,7 +3,7 @@
 
 This project I focused on learning about:
 
- - What is a SSH
+ - What is SSH
  - How to create an SSH RSA key pair
  - How to connect to a remote host using SSH.
 
