@@ -1,5 +1,5 @@
 # Client configuration for local SSH client(w/ Puppet
-file { '/root/.ssh/config':
+file { '/etc/ssh/ssh_config':
 ensure  => file,
 content => "
 Host root@aa54152689ce
