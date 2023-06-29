@@ -5,14 +5,19 @@ sudo apt-get install -y nginx
 # Configure Nginx to listen to port 80
 sudo ufw allow 'Nginx HTTP'
 
-# Configure default Nginx server block
+# Configure defaul Nginx server block
 sudo tee /etc/nginx/sites-available/default <<EOF
 server {
     listen 80;
     listen [::]:80 default_server;
+    root /var/www/html;
+    index index.html;
     server_name incredibles.tech;
     location / {
-        return 301 https://www.youtube.com;
+        try_files \$uri \$uri/ /index.html;
+    }
+    location /redirect_me {
+	return 301 http://www.youtube.com;
     }
 }
 EOF
