@@ -6,10 +6,11 @@ sudo apt-get install -y nginx
 sudo ufw allow 'Nginx HTTP'
 
 # Set the path to your custom 404 page
-echo "Ceci n'est pas une page" | sudo tee "/var/www/html/404.html" > /dev/null
+sudo tee /var/www/html/404.html > /dev/null <<EOF
+Ceci n'est pas une page
+EOF
 
-
-# Configure default Nginx server block include 404 redirection
+# Configure default Nginx server block include 404 error page
 sudo tee /etc/nginx/sites-available/default <<EOF
 server {
     listen 80;
@@ -18,11 +19,12 @@ server {
     index index.html;
     server_name incredibles.tech;
     location / {
-        try_files \$uri \$uri/ /index.html;
+        try_files \$uri \$uri/ =404;
     }
     error_page 404 /404.html;
     location = /404.html {
 	internal;
+	return 404 "Ceci n'est pas une page";
     }
     location /redirect_me {
 	return 301 http://www.youtube.com;
