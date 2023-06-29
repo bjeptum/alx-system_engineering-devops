@@ -1,4 +1,5 @@
 # Manifest that kills process killmenow
+
 exec { 'killmenow':
 command     => 'pkill killmenow',
 onlyif      => 'pgrep killmenow',
