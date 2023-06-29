@@ -4,13 +4,15 @@ sudo apt-get update
 sudo apt-get install -y nginx
 # Configure Nginx to listen to port 80
 sudo ufw allow 'Nginx HTTP'
-CONFIG_FILE="/etc/nginx/sites-available/default"
-sudo tee "$CONFIG_FILE" <<EOF
+
+# Configure defaul Nginx server block
+sudo tee /etc/nginx/sites-available/default <<EOF
 server {
     listen 80;
-    server_name incredibles.tech;
+    listen [::]:80 default_server;
     root /var/www/html;
     index index.html;
+    server_name incredibles.tech;
     location / {
         try_files \$uri \$uri/ /index.html;
     }
@@ -18,8 +20,9 @@ server {
 EOF
 
 #Configure Nginx to return "Hello World!" at root path
-echo "Hello World!" > /var/www/html/index.html
+sudo tee /var/www/html/index.html <<EOF
+Hello World!
+EOF
 
 # Restart Nginx
-sudo nginx -t
 sudo service nginx restart
