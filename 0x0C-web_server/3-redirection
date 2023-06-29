@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Install Nginx to webserver
+sudo apt-get update
+sudo apt-get install -y nginx
+# Configure Nginx to listen to port 80
+sudo ufw allow 'Nginx HTTP'
+
+# Configure default Nginx server block
+sudo tee /etc/nginx/sites-available/default <<EOF
+server {
+    listen 80;
+    listen [::]:80 default_server;
+    server_name incredibles.tech;
+    location / {
+        return 301 https://www.youtube.com;
+    }
+}
+EOF
+
+#Configure Nginx to return "Hello World!" at root path
+sudo tee /var/www/html/index.html <<EOF
+Hello World!
+EOF
+
+# Restart Nginx
+sudo service nginx restart
