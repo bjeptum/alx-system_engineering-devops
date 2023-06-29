@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# Install Nginx to webserver
+sudo apt-get update
+sudo apt-get install -y nginx
+# Configure Nginx to listen to port 80
+sudo ufw allow 'Nginx HTTP'
+
+# Set the path to your custom 404 page
+echo "Ceci n'est pas une page" | sudo tee "/var/www/html/404.html" > /dev/null
+
+
+# Configure default Nginx server block include 404 redirection
+sudo tee /etc/nginx/sites-available/default <<EOF
+server {
+    listen 80;
+    listen [::]:80 default_server;
+    root /var/www/html;
+    index index.html;
+    server_name incredibles.tech;
+    location / {
+        try_files \$uri \$uri/ /index.html;
+    }
+    error_page 404 /404.html;
+    location = /404.html {
+	internal;
+    }
+    location /redirect_me {
+	return 301 http://www.youtube.com;
+    }
+}
+EOF
+
+#Configure Nginx to return "Hello World!" at root path
+sudo tee /var/www/html/index.html <<EOF
+Hello World!
+EOF
+
+# Restart Nginx
+sudo service nginx restart
