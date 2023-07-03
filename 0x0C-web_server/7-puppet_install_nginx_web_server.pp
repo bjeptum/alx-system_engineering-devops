@@ -35,7 +35,7 @@ file { '/var/www/html/index.html':
   ensure      => present,
   content     => 'Hello World!',
   require     => Package['nginx'],
-  notify  => Service['nginx'],
+  notify      => Service['nginx'],
 }
 
 exec { 'restart-nginx':
