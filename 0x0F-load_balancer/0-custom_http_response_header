@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# Install Nginx to webserver
+sudo apt-get update
+sudo apt-get install -y nginx
+
+# Configure defaul Nginx server block
+sudo tee /etc/nginx/sites-available/default <<EOF
+server {
+    listen 80;
+    listen [::]:80 default_server;
+    root /var/www/html;
+    index index.html;
+    server_name incredibles.tech;
+    location / {
+        try_files \$uri \$uri/ /index.html;
+    }
+}
+EOF
+
+# Configure Nginx to return "Hello World!" at root path
+sudo tee /var/www/html/index.html <<EOF
+Hello World!
+EOF
+
+# Define the custom response header
+header_name="X-Served-By"
+header_value=$(hostname)
+
+# Add the custom header to Nginx configuration
+sudo sed -i "/http {/a\\\\tadd_header $header_name $header_value; /etc/nginx/sites-available/default}"
+
+# Restart Nginx
+sudo service nginx restart
