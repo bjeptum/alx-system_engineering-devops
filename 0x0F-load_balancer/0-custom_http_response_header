@@ -2,19 +2,12 @@
 # Install Nginx to webserver
 sudo apt-get update
 sudo apt-get install -y nginx
+# Configure Nginx to listen to port 80
+sudo ufw allow 'Nginx HTTP'
 
-# Configure defaul Nginx server block
-sudo tee /etc/nginx/sites-available/default <<EOF
-server {
-    listen 80;
-    listen [::]:80 default_server;
-    root /var/www/html;
-    index index.html;
-    server_name incredibles.tech;
-    location / {
-        try_files \$uri \$uri/ /index.html;
-    }
-}
+# Set the path to your custom 404 page
+sudo tee /var/www/html/404.html > /dev/null <<EOF
+Ceci n'est pas une page
 EOF
 
 # Configure Nginx to return "Hello World!" at root path
@@ -22,12 +15,11 @@ sudo tee /var/www/html/index.html <<EOF
 Hello World!
 EOF
 
-# Define the custom response header
-header_name="X-Served-By"
-header_value=$(hostname)
+sudo service nginx start
 
-# Add the custom header to Nginx configuration
-sudo sed -i "/http {/a\\\\tadd_header $header_name $header_value; /etc/nginx/sites-available/default}"
+# Add custom response header to Nginx Configuration
+sudo sed -i.bak "12i\\\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
 
 # Restart Nginx
+sudo service nginx -t
 sudo service nginx restart
