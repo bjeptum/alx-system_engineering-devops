@@ -8,4 +8,4 @@ eval $("ssh-agent")
 ssh-add ~/.ssh/id_rsa
 
 #login to web-01
-ssh ubuntu@100.26.210.39
+ssh ubuntu@18.208.120.29
