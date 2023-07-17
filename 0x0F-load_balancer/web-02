@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#Server-01 login commands
+
+#setting up the SSH-agent
+eval $("ssh-agent")
+
+#path to identity file
+ssh-add ~/.ssh/id_rsa
+
+#login to web-01
+ssh ubuntu@100.26.210.39
