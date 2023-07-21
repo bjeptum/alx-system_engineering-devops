@@ -9,5 +9,11 @@ fi
 # Get the username from the argument
 username="$1"
 
-# Run the whoami command under the specified user using 'sudo'
-su "$username" -c whoami
+# Check if the user exists using 'id' command
+if id "$username" &>/dev/null; then
+	# Run the whoami command under the specified user using 'sudo'
+	su "$username" -c whoami
+else
+	echo "User '$username' does not exist or does not have a home directory."
+	exit 1
+fi
