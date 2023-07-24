@@ -12,8 +12,8 @@ username="$1"
 # Check if the user exists using 'id' command
 if id "$username" &>/dev/null; then
 	# Run the whoami command under the specified user using 'sudo'
-	su "$username" -c whoami
+	sudo -u "$username" whoami
 else
-	echo "User does not exist or does not have a home directory."
+	echo "User does not exist."
 	exit 1
 fi
