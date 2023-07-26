@@ -32,12 +32,14 @@ def record_tasks_json(employee_id):
 
     # Prepare JSON data, and  save to file
     data = {
-            str(employee_id): [{"task": todo["title"], \
-                    "completed": todo["completed"], \
+            str(employee_id): [
+                {
+                    "task": todo["title"],
+                    "completed": todo["completed"],
                     "username": empl_name,
                 }
-            for todo in todos_data
-            ]
+                for todo in todos_data
+                ]
             }
     filename = f"{employee_id}.json"
     with open(filename, "w") as json_file:
