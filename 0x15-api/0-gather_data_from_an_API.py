@@ -9,7 +9,7 @@ import requests
 import sys
 
 
-def to_dolist_progress_employees(employee_id):
+def to_do_list_progress_employees(employee_id):
     """Calculates progress of employee tasks and dispalys"""
     url = "https://jsonplaceholder.typicode.com"
     employee_url = f"{url}/users/{employee_id}"
@@ -29,7 +29,7 @@ def to_dolist_progress_employees(employee_id):
     num_done = len(done)
 
     # Display progress information
-    print(f"Employee {empl_name} is done with tasks ({num_done}/{total}): ")
+    print(f"Employee {empl_name} is done with tasks({num_done}/{total}):")
     for task in done:
         print(f"\t{task['title']}")
 
@@ -40,4 +40,4 @@ if __name__ == "__main__":
         sys.exit(1)
 
     employee_id = int(sys.argv[1])
-    to_dolist_progress_employees(employee_id)
+    to_do_list_progress_employees(employee_id)
