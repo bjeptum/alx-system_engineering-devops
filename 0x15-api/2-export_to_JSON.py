@@ -27,7 +27,7 @@ def record_tasks_json(employee_id):
     todos_data = response.json()
 
     total = len(todos_data)
-    done = [todo for todo in todos_data if todo['completed']]
+    done = [todo for todo in todos_data]
     num_done = len(done)
 
     # Prepare JSON data, and  save to file
