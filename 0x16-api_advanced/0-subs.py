@@ -2,8 +2,8 @@
 """
 Queries the Reddit API
 """
-import requests
 import json
+import requests
 import sys
 
 
