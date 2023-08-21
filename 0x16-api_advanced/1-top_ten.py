@@ -19,7 +19,7 @@ def top_ten(subreddit):
     headers = {"User-Agent": "Custom User-Agent"}
 
     try:
-        query_params = { "limit": 10}
+        query_params = {"limit": 10}
         response = requests.get(url, headers=headers,
                                 params=query_params, allow_redirects=False)
 
