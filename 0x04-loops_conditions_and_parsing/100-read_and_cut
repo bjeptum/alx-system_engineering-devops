@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Displays the content of the file /etc/passwd
+file='/etc/passwd'
+if [ ! -f "$file" ] || [ ! -r "$file" ]; then
+    echo "Error: File $file does not exist or is not readable."
+    exit 1
+fi
+
+while IFS=: read -r username _ uid _ _ home _; do
+    echo "Username: $username"
+    echo "User ID: $uid"
+    echo "Home Directory: $home"
+    echo  # Blank line for readability
+done < "$file"
