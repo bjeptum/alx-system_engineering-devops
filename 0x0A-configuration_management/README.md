@@ -19,6 +19,7 @@ $ apt-get install -y ruby-augeas
 $ apt-get install -y ruby-shadow
 $ apt-get install -y puppet
 `
+
 The project was simply a set of tasks to familiarize with the basic level syntax which is virtually identical in newer versions of Puppet,and so no need to attempt to upgrade versions.
 
  ### Install puppet-lint
