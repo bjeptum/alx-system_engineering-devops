@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# SSH Configuration file for the locall SSH Client
-Host root@aa54152689ce
+# SSH Configuration file for the local SSH Client
+Host strongestavenger@strongestavenger
 IdentityFile ~/.ssh/school
 PasswordAuthentication no
 RSAAuthentication yes
