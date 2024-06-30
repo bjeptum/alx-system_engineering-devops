@@ -14,11 +14,11 @@ Tested on Ubuntu 20.04 LTS
 
 Puppet 3.8
 
-### Files
+#### Files
 
 | Concept  | Description |
 | ------------- | ------------- |
 | 1) 0-use_a_private_key | Uses ssh to connect to a server using a private key previously generated |
 | 2) 1-create_ssh_key_pair | Creates an RSA key pair |
 | 3) 2-ssh_config | SSH configuration file for the local SSH client using a private key and refuse usage of password authentication |
-| 4) 4-puppet_ssh_config.pp | Sets up client SSH configuration file to connect to a server without typing a password using Puppet |
+| 4) 100-puppet_ssh_config.pp | Sets up client SSH configuration file to connect to a server without typing a password using Puppet |
