@@ -1,4 +1,4 @@
-# Manifest that installs Nginx to server
+# Puppet manifest that installs Nginx to server
 
 exec { 'update-apt':
   command     => 'apt-get update',
