@@ -13,7 +13,7 @@ server 124352-web-02 34.232.52.141:80 check
 EOF
 
 # Enable HAProxy init script
-sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
+sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
 
 # Start HAProxy service
-service haproxy start
+sudo service haproxy start
