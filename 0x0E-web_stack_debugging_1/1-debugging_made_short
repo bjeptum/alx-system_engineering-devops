@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Shorter resolve to to listen on port 80
-sudo tee /etc/nginx/sites-available/default >/dev/null 
+sudo sed i "s/sites-enabled/sites-available/" /etc/nginx/nginx.conf
 sudo systemctl restart nginx
