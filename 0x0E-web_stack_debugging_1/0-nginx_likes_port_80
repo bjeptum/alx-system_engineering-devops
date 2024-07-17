@@ -7,18 +7,7 @@ sudo sysctl net.ipv6.conf.default.disable_ipv6=1
 sudo apt-get update
 sudo apt-get install -y nginx
 # Configure Nginx to listen to port 80
-sudo tee /etc/nginx/sites-available/default <<EOF
-server {
-    listen 80;
-    listen [::]:80 default_server;
-    root /var/www/html;
-    index index.html index.html index.nginx-debian.html;
-    location / {
-        try_files \$uri \$uri/ /index.html;
-    }
-}
-EOF
-sudo systemctl start nginx
+sudo sed i "s/sites-enabled/sites-available/" /etc/nginx/nginx.conf
 sudo nginx -t
 sudo service nginx restart
 # Check Nginx status
