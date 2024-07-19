@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
 # Resolve Nginx to listen to port 80 and turn off IPv6
-sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+sudo apt-get update
+sudo apt-get install -y nginx
+# Remove existing config
+sudo rm /etc/nginx/sites-enabled/default
+# Update config with symbolic link
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+# Restart Nginx to apply changes
 sudo service nginx restart
