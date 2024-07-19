@@ -4,9 +4,5 @@ sudo apt-get update
 sudo apt-get install -y nginx
 # Configure Nginx to listen to port 80
 sudo sed -i 's/8080/80/g' /etc/nginx/sites-available/default
-# Update config with symbolic link
-sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo nginx -t
 sudo service nginx restart
-# Check Nginx status
-sudo service nginx status
