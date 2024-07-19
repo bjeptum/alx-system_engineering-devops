@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Shorter resolve to to listen on port 80
 sudo apt-get install -y nginx
-sudo sed -i '/listen \[::\]:80 default_server;/d' /etc/nginx/sites-available/default
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo pkill -f -TERM "/usr/sbin/nginx"
