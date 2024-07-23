@@ -6,12 +6,12 @@ if [ $# -ne 1 ]; then
   exit 1
 fi
 
-# Get the username from the argument
+# Get username from the argument
 username="$1"
 
-# Check if the user exists using 'id' command
+# Check if user exists using 'id' command
 if id "$username" &>/dev/null; then
-	# Run the whoami command under the specified user using 'sudo'
+	# Run whoami command under the specified user using 'sudo'
 	sudo -u "$username" whoami
 else
 	echo "User does not exist."

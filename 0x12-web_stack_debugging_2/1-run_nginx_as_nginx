@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Configures container to have Nginx running as teh nginx user
+# Configures container to have Nginx running as nginx user
 
 # Replace the user directive in nginx.conf with nginx
 sed -i "s/#user www-data/user nginx/" /etc/nginx/nginx.conf
