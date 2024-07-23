@@ -15,10 +15,10 @@ package { 'nginx':
 
 # Ensure the Nginx service is running
 service { 'nginx':
-  ensure     => running,
-  enable     => true,
-  subscribe  => File['/etc/nginx/nginx.conf'],
-  require    => Package['nginx'],
+  ensure    => running,
+  enable    => true,
+  subscribe => File['/etc/nginx/nginx.conf'],
+  require   => Package['nginx'],
 }
 
 # Configure the firewall to allow HTTP traffic
