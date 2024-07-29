@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Returns information about employees
-TOdo list progress
+Returns information of a given 
+employee's TODO list progress
 """
 
 
