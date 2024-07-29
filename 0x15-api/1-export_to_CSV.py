@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Returns information about tasks
+Records all tasks
 owned by each employee
 """
 
