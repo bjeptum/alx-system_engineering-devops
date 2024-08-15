@@ -19,14 +19,14 @@ def recurse(subreddit, hot_list=None, after=None):
 
     # Set a custom User-Agent to avoid Too Many Requests error
     headers = {"User-Agent": "Custom User-Agent"}
-    query_params = {"after": after} if after else {}
+    query_params = {"after": after}
 
     response = requests.get(url, headers=headers,
                             params=query_params, allow_redirects=False)
 
     if response.status_code == 200:
-        data = response.json()
-        subs = data.get('data', {}).get('children', [])
+        data = response.json().get('data', {})
+        subs = data.get('children', [])
 
         if not subs:
             return hot_list if hot_list else None
@@ -37,7 +37,7 @@ def recurse(subreddit, hot_list=None, after=None):
                 hot_list.append(title)
 
         # Get the next page of results
-        after = data.get('data', {}).get('after')
+        after = data.get('after')
         if after:
             return recurse(subreddit, hot_list, after)
 
@@ -47,6 +47,7 @@ def recurse(subreddit, hot_list=None, after=None):
         return None
     else:
         response.raise_for_status()
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
