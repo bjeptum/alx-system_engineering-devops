@@ -30,6 +30,7 @@ def recurse(subreddit, hot_list=None, after=None):
 
         if not subs:
             return hot_list if hot_list else None
+
         for sub in subs:
             title = sub['data'].get('title')
             if title:
@@ -38,7 +39,6 @@ def recurse(subreddit, hot_list=None, after=None):
         # Get the next page of results
         after = data.get('data', {}).get('after')
         if after:
-            hot_list.append({'after': after})
             return recurse(subreddit, hot_list, after)
 
         return hot_list if hot_list else None
@@ -48,14 +48,14 @@ def recurse(subreddit, hot_list=None, after=None):
     else:
         response.raise_for_status()
 
-    if __name__ == "__main__":
-        if len(sys.argv) != 2:
-            print("Usage: python script.py <subreddit>")
-            sys.exit(1)
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python script.py <subreddit>")
+        sys.exit(1)
 
-        subreddit = sys.argv[1]
-        hot_articles = recurse(subreddit)
-        if hot_articles is not None:
-            print(json.dumps(hot_articles, indent=2))
-        else:
-            print("No hot articles found or invalid subreddit.")
+    subreddit = sys.argv[1]
+    hot_articles = recurse(subreddit)
+    if hot_articles is not None:
+        print(json.dumps(hot_articles, indent=2))
+    else:
+        print("No hot articles found or invalid subreddit.")
