@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Records all tasks
-owned by each employee
+""" Module records all tasks owned by each employee
 """
 
 
